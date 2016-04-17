@@ -1,5 +1,7 @@
 //Sanjana's drawing
 
+var x = 350; //variable of halfway & meeting point
+
 function setup(){
   createCanvas(windowWidth,windowHeight);
 }
@@ -8,7 +10,12 @@ function draw(){
   background("black");
   stroke("lightblue")
   fill("cadetblue")
-  //diamond
+  drawDiamond();
+  drawLight();
+  drawRainbow();
+}
+
+function drawDiamond (){
   triangle(300,300,350,350,400,300);
   quad(300,300,310,290,390,290,400,300);
   stroke("lightblue");
@@ -32,94 +39,65 @@ function draw(){
       line(380,290,390,300);
     line(400,300,350,350);
       line(390,290,400,300);
-  //light entering
-  stroke("white");
-  line(310,0,350,290);
-  line(320,0,350,290);
-  line(330,0,350,290);
-  line(340,0,350,290);
-  line(350,0,350,290);
-  line(360,0,350,290);
-  line(370,0,350,290);
-  line(380,0,350,290);
-  line(390,0,350,290);
+}
 
-//rainbow on left
-  stroke("red")
-    line(350,650,350,350);
-  stroke("orange")
-    line(340,650,350,350);
-  stroke("yellow");
-    line(330,650,350,350);
-  stroke("green");
-    line(320,650,350,350);
-  stroke("blue");
-    line(310,650,350,350);
-  stroke("indigo");
-    line(300,650,350,350);
-  stroke("violet");
-    line(290,650,350,350);
-  stroke("red");
-    line(280,650,350,350);
-  stroke("orange")
-    line(270,650,350,350);
-  stroke("yellow")
-    line(260,650,350,350);
-  stroke("green");
-    line(250,650,350,350);
-  stroke("blue");
-    line(240,650,350,350);
-  stroke("indigo");
-    line(230,650,350,350);
-  stroke("violet");
-    line(220,650,350,350);
-  stroke("red");
-    line(210,650,350,350);
-  stroke("orange")
-    line(200,650,350,350);
-  stroke("yellow")
-    line(190,650,350,350);
-  stroke("green");
-    line(180,650,350,350);
-  stroke("blue");
-    line(170,650,350,350);
-//rainbow on right
-  stroke("orange");
-    line(360,650,350,350);
-  stroke("yellow");
-    line(370,650,350,350);
-  stroke("green");
-    line(380,650,350,350);
-  stroke("blue")
-    line(390,650,350,350);
-  stroke("indigo")
-    line(400,650,350,350);
-  stroke("violet");
-    line(410,650,350,350);
-  stroke("red");
-    line(420,650,350,350);
-  stroke("orange")
-    line(430,650,350,350);
-  stroke("yellow")
-    line(440,650,350,350);
-  stroke("green")
-    line(450,650,350,350);
-  stroke("blue")
-    line(460,650,350,350);
-  stroke("indigo");
-    line(470,650,350,350);
-  stroke("violet");
-    line(480,650,350,350);
-  stroke("red");
-    line(490,650,350,350);
-  stroke("orange")
-    line(500,650,350,350);
-  stroke("yellow")
-    line(510,650,350,350);
-  stroke("green")
-    line(520,650,350,350);
-  stroke("blue")
-    line(530,650,350,350);
-  stroke("indigo");
-    line(540,650,350,350);
+function drawLight(){
+  stroke("white");
+  line(310,0,x,290);
+  line(320,0,x,290);
+  line(330,0,x,290);
+  line(340,0,x,290);
+  line(350,0,x,290);
+  line(360,0,x,290);
+  line(370,0,x,290);
+  line(380,0,x,290);
+  line(390,0,x,290);
+}
+
+function drawRainbow(){
+stroke("red")
+  line(350,650,x,x);
+  line(280,650,x,x);
+  line(210,650,x,x);
+  line(420,650,x,x);
+  line(490,650,x,x);
+stroke("orange")
+  line(340,650,x,x);
+  line(270,650,x,x);
+  line(200,650,x,x);
+  line(360,650,x,x);
+  line(430,650,x,x);
+  line(500,650,x,x);
+stroke("yellow");
+  line(330,650,x,x);
+  line(260,650,x,x);
+  line(190,650,x,x);
+  line(370,650,x,x);
+  line(440,650,x,x);
+  line(510,650,x,x);
+stroke("green");
+  line(320,650,x,x);
+  line(250,650,x,x);
+  line(180,650,x,x);
+  line(380,650,x,x);
+  line(450,650,x,x);
+  line(520,650,x,x);
+stroke("blue");
+  line(310,650,x,x);
+  line(240,650,x,x);
+  line(170,650,x,x);
+  line(390,650,x,x);
+  line(460,650,x,x);
+  line(530,650,x,x);
+stroke("indigo");
+  line(300,650,x,x);
+  line(230,650,x,x);
+  line(400,650,x,x);
+  line(470,650,x,x);
+stroke("violet");
+  line(290,650,x,x);
+  line(220,650,x,x);
+  line(410,650,x,x);
+  line(480,650,x,x);
+  line(540,650,x,x);
 }
